@@ -155,6 +155,16 @@ app.get("/post/:id", async (req, res) => {
     }
 })
 
+app.get("/delete/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        await Post.deleteOne({_id: id});
+        req.json({"message": "Post deleted"});
+    } catch (error) {   
+        res.json({ "error": error.message });
+    }
+})
+
 app.listen(4000, () => {
     console.log(`Listening at port 4000`);
 })

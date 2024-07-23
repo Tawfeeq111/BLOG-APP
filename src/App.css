@@ -190,3 +190,13 @@ a{
 .logout{
   cursor: pointer;
 }
+
+.postPage-btns{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.postPage-btns a{
+  width: 100px;
+}

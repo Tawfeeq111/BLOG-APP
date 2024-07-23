@@ -35,8 +35,8 @@ export function CreatePost()
     return (
         <>
             <form className='createForm' onSubmit={handelSubmit}>
-                <input type="title" value={title} onChange={e => setTitle(e.target.value)} />
-                <input type="summary" value={summary} onChange={e => setSummary(e.target.value)} />
+                <input type="title" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} />
+                <input type="summary" placeholder="Summary" value={summary} onChange={e => setSummary(e.target.value)} />
                 <input type="file" onChange={e => setFiles(e.target.files)}/>
                 <ReactQuill theme="snow" value={content} onChange={setContent} />
                 <button style={{marginTop: "7px"}}>Create post</button>
